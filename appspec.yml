@@ -1,8 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: /resumesite/index.html
+  - source: index.html
     destination: /var/www/html/
+  -	source: /*
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
