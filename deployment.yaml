@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: resumeapp
+  template:
+    metadata:
+      labels:
+        app: resumeapp
+    spec:
+      containers:
+      - name: resumeapp
+        image: anikhilt/resume:v1
+        ports:
+        - containerPort: 80
